@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Seguridad</title>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-image: radial-gradient(circle at center, #899Dc4, #495D84);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+            font-weight: 300;
+        }
+
+        .all {
+            display: flex;
+            perspective: 10px;
+            transform: perspective(300px) rotateX(20deg);
+            will-change: perspective;
+            perspective-origin: center center;
+            transition: all 1.3s ease-out;
+            justify-content: center;
+            transform-style: preserve-3d;
+        }
+
+        .all:hover {
+            perspective: 1000px;
+            transition: all 1.3s ease-in;
+            transform: perspective(10000px) rotateX(0deg);
+        }
+
+        .all:hover .text {
+            opacity: 1;
+        }
+
+        .all:hover > div {
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        .all:hover .explainer {
+            opacity: 0;
+        }
+
+        .left,
+        .center,
+        .right,
+        .lefter,
+        .righter {
+            width: 200px;
+            height: 150px;
+            transform-style: preserve-3d;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+            opacity: 0;
+            transition: all .3s ease;
+            transition-delay: 1s;
+            position: relative;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #58d;
+            cursor: pointer;
+            background-blend-mode: color-burn;
+        }
+
+        .left:hover,
+        .center:hover,
+        .right:hover,
+        .lefter:hover,
+        .righter:hover {
+            box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+            background-color: #ccf;
+        }
+
+        .text {
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all .3s ease;
+            bottom: 0;
+            left: 5px;
+            position: absolute;
+            will-change: transform;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+        }
+
+        .lefter {
+            transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+            background-image: url(https://cdn1.iconfinder.com/data/icons/computer-techologies-outline-free/128/ic_windows_10_laptop-512.png);
+        }
+
+        .left {
+            transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+            background-image: url(https://cdn2.iconfinder.com/data/icons/mixed-new-6/512/hacker_anonymous_hack_register_93-256.png);
+        }
+
+        .center {
+            opacity: 1;
+            background-image: url(https://cdn2.iconfinder.com/data/icons/facebook-ui/48/Jee-15-512.png);
+        }
+
+        .right {
+            transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+            background-image: url(https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Linux-256.png);
+        }
+
+        .righter {
+            transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+            background-image: url(https://cdn3.iconfinder.com/data/icons/other-icons/48/search-512.png);
+        }
+
+        .explainer {
+            font-weight: 300;
+            font-size: 2rem;
+            color: #fff;
+            transition: all .6s ease;
+            width: 100%;
+            height: 100%;
+            background-color: #303050;
+            background-image: radial-gradient(circle at center top, #cce, #33a);
+            border-radius: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ref {
+            background-color: #000;
+            background-image: linear-gradient(to bottom, #d80, #c00);
+            border-radius: 3px;
+            padding: 7px 10px;
+            position: absolute;
+            font-size: 16px;
+            bottom: 10px;
+            right: 10px;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+        }
+
+        .ref::first-letter {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="lefter">
+            <a href="https://docs.google.com/document/d/1x8dFvA8Nr5RGP3XXDyHthCU25258btG5jVeehjC3aTQ/edit?usp=sharing" target="_blank"><div class="text">ACTIVE DIRECTORY</div></a>
+        </div>
+        <div class="left">
+            <a href="https://docs.google.com/document/d/1GlYfgXfv3bjUztbMQa88oRx7k-rP4aE05FTO24_Nurs/edit?usp=sharing" target="_blank"><div class="text">HACKING</div></a>
+        </div>
+        <div class="center">
+            <div class="explainer"><span>Pincha aqui</span></div>
+            <a href="https://docs.google.com/document/d/13bTzZq7ZOIe2228MAx7HX7IrZHfijuMwOzX01ZKY5b0/edit?usp=sharing" target="_blank"><div class="text">SECURITY</div></a>
+        </div>
+        <div class="right">
+            <a href="https://docs.google.com/document/d/1CeYV0g9fgJ2tHRk0sbrMViWxD9hXRgt8XYX2S6zd2IM/edit?usp=sharing" target="_blank"><div class="text">LINUX</div></a>
+        </div>
+        <div class="righter">
+            <a href="https://docs.google.com/document/d/10JAy9VCSs5MQ0lAzM0MEeXTAQ7KGV36b9T8oIWuXc0g/edit?usp=sharing" target="_blank"><div class="text">ENUMERATION</div></a>
+        </div>
+    </div>
+
+    <a href="https://google.com" target="_blank" class="ref">Mikel</a>
+</body>
+</html>
